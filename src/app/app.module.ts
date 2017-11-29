@@ -1,6 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './_services/in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +18,8 @@ import { ZenNewscontainerComponent } from './zen-app/zen-home/zen-newscontainer/
 import { ZenTopvideosComponent } from './zen-app/zen-home/zen-topvideos/zen-topvideos.component';
 import { ZenFooterComponent } from './zen-app/zen-home/zen-footer/zen-footer.component';
 import { ZenNewsComponent } from './zen-app/zen-home/zen-newscontainer/zen-news/zen-news.component';
+import { HomeService } from './_services/home-service.service';
+import { AuthenticationService } from './_services/authentication.service';
 
 
 @NgModule({
@@ -34,9 +39,15 @@ import { ZenNewsComponent } from './zen-app/zen-home/zen-newscontainer/zen-news/
     ZenNewsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
+  providers: [HomeService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

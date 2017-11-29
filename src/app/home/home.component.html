@@ -17,3 +17,9 @@
     <zen-footer></zen-footer>
   </zen-home>
 </zen-app>
+
+
+<li *ngFor="let data of homeResponseData">
+  <span>Title: {{data.homeData.header.title}}</span> <br>
+  <span>Slogan: {{data.homeData.header.Slogan}}</span>
+</li>
