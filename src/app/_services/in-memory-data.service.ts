@@ -8,7 +8,7 @@ export class InMemoryDataService implements InMemoryDbService {
             homeData:{
                      header:{
                      title:"News App",
-                     Slogan:"Your simple news app"
+                     slogan:"Your simple news app"
                      },
                      categories:[
                      {id:1,title:"Entertrainment"},

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertService, AuthenticationService } from '../_services/index';
 
-import { Home } from '../_data/Home';
+import { Home } from '../_models/Home';
 import { HomeService } from '../_services/home-service.service';
 
 @Component({
@@ -12,7 +13,10 @@ export class HomeComponent implements OnInit {
 
   homeResponseData: Home[];
 
-  constructor(private homeService: HomeService) { }
+  constructor(
+    private homeService: HomeService,
+    private authenticationservice: AuthenticationService
+  ) { }
 
   ngOnInit() {
     this.getHomeData();
@@ -26,5 +30,8 @@ export class HomeComponent implements OnInit {
         this.homeResponseData = responseData;
       }
     );
+  }
+  logout(): void{
+    this.authenticationservice.logout();
   }
 }

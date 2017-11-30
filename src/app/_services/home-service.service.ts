@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
 
-import { Home } from '../_data/Home';
+import { Home } from '../_models/Home';
 import { Response } from '@angular/http/src/static_response';
 
 @Injectable()

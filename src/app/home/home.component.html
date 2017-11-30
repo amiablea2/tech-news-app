@@ -20,6 +20,12 @@
 
 
 <li *ngFor="let data of homeResponseData">
-  <span>Title: {{data.homeData.header.title}}</span> <br>
-  <span>Slogan: {{data.homeData.header.Slogan}}</span>
+  <span>Title: {{data.homeData.header.title}}</span>
+  <span>Slogan: {{data.homeData.header.slogan}}</span>
 </li>
+
+<div>
+  <p>
+    <a [routerLink]="['/login']">Logout</a>
+  </p>
+</div>

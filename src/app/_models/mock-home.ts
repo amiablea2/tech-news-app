@@ -1,4 +1,4 @@
-import { Home } from '../_data/Home';
+import { Home } from '../_models/home';
 
 export const HOMEDATA: Home[] = [
     {
