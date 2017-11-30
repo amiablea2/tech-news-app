@@ -17,3 +17,15 @@
     <zen-footer></zen-footer>
   </zen-home>
 </zen-app>
+
+
+<li *ngFor="let data of homeResponseData">
+  <span>Title: {{data.homeData.header.title}}</span>
+  <span>Slogan: {{data.homeData.header.slogan}}</span>
+</li>
+
+<div>
+  <p>
+    <a [routerLink]="['/login']">Logout</a>
+  </p>
+</div>
