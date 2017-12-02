@@ -1,3 +1,62 @@
+<li *ngFor="let data of homeResponseData">
+        <span>Title: <b>{{data.homeData.header.title}}</b></span>
+        <span>Slogan: <b>{{data.homeData.header.slogan}}</b></span>
+</li>
+<div *ngFor="let data of homeResponseData">
+<div class="row">
+    <div class="col-md-12">
+        <zen-header></zen-header>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+      <zen-categories
+      [allCategories]="data.homeData.categories">
+        </zen-categories>
+    </div>
+    <div class="col-md-6">
+        <zen-newscontainer 
+        [allNews]="data.homeData.news">
+    </zen-newscontainer>
+        
+    </div>
+    <div class="col-md-3">
+        <zen-topvideos 
+        [allVideos]="data.homeData.topVideos">
+        </zen-topvideos>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <zen-footer></zen-footer>
+    </div>
+</div>
+</div>
+<!--
+<ul>
+            <div *ngFor="let data of homeResponseData">
+                <li *ngFor="let news of data.homeData.news">
+                    <zen-news [headline]="news.headline"></zen-news>
+                </li>
+            </div>
+        </ul>
+
+
+    {{homeDataKeys}}
+<div *ngFor="let arr of homeResponseData">
+        <div *ngFor="let item of homeDataKeys">
+          item : {{item}}
+          {{arr[item] | json}}
+          <br>
+          <br>
+        </div>
+       </div>
+
+    -->
+
+<!--
+
 <zen-app>
   <zen-home>
     <zen-header>
@@ -18,14 +77,10 @@
   </zen-home>
 </zen-app>
 
+-->
 
-<li *ngFor="let data of homeResponseData">
-  <span>Title: {{data.homeData.header.title}}</span>
-  <span>Slogan: {{data.homeData.header.slogan}}</span>
-</li>
+<!--
+    <zen-app 
+[homeData]="homeResponseData"></zen-app>
 
-<div>
-  <p>
-    <a [routerLink]="['/login']">Logout</a>
-  </p>
-</div>
+-->

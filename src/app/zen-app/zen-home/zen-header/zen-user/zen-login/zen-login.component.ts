@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../../../../../_services/index';
 
 @Component({
   selector: 'zen-login',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZenLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authenticationservice: AuthenticationService
+  ) { }
 
   ngOnInit() {
+  }
+  
+  logout(): void{
+    this.authenticationservice.logout();
   }
 
 }
