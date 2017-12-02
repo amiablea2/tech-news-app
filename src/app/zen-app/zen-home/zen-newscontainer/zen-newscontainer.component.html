@@ -1,3 +1,4 @@
-<p>
-  zen-newscontainer works!
-</p>
+News-Container:
+<ul *ngFor="let index of allNews">
+    <li><zen-news [headline]="index.headline"></zen-news></li>
+</ul>

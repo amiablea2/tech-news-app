@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'zen-newscontainer',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./zen-newscontainer.component.css']
 })
 export class ZenNewscontainerComponent implements OnInit {
+
+  @Input() myId: number;
+  @Input() allNews: any[];
 
   constructor() { }
 

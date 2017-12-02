@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'zen-news',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./zen-news.component.css']
 })
 export class ZenNewsComponent implements OnInit {
+
+  @Input() headline: string;
 
   constructor() { }
 

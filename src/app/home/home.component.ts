@@ -12,6 +12,7 @@ import { HomeService } from '../_services/home-service.service';
 export class HomeComponent implements OnInit {
 
   homeResponseData: Home[];
+  homeDataKeys: any=[];
 
   constructor(
     private homeService: HomeService,
@@ -26,12 +27,26 @@ export class HomeComponent implements OnInit {
   getHomeData(): void {
     this.homeService.getHomeData()
     .subscribe(responseData => {
-        console.log(responseData);
+        // console.log(responseData);
         this.homeResponseData = responseData;
+        console.log(this.homeResponseData);
+        //this.transform();      
       }
     );
   }
   logout(): void{
     this.authenticationservice.logout();
   }
+/*
+  transform(): void{
+    // this.homeDataKeys = Object.keys(this.homeResponseData);
+    // console.log(this.homeDataKeys);
+    for(let arr of this.homeResponseData){
+      Object.keys(arr) && Object.keys(arr).map((key)=>{
+         //console.log("push")
+         this.homeDataKeys.push(key);
+       });
+   }
+    }
+    */
 }

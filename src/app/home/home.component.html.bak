@@ -1,0 +1,120 @@
+<zen-app></zen-app>
+
+<!--
+<zen-app 
+class="row container-fluid" 
+*ngFor="let data of homeResponseData" 
+[valueTitle]="data.homeData.header.title">
+  <zen-home>
+    <div class="row">
+      <zen-header>
+        <div class="col-12 col-md-8">
+          <zen-search></zen-search>
+        </div>
+        <div class="col-6 col-md-4">
+          <zen-user>
+            <zen-login></zen-login>
+          </zen-user>
+        </div>
+      </zen-header>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-4">
+        <zen-categories></zen-categories>
+      </div>
+      <div class="col-6 col-md-4">
+        <zen-newscontainer>
+          <zen-news
+          class="row container-fluid" 
+          *ngFor="let news of homeResponseData.homeData.news." 
+          [valueNewsHeadlines]="news.headlines"
+          [valueNewsDate]="news.date"
+          ></zen-news>
+        </zen-newscontainer>
+      </div>
+      <div class="col-6 col-md-4">
+        <zen-topvideos></zen-topvideos>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <zen-footer></zen-footer>
+      </div>
+    </div>
+  </zen-home>
+</zen-app>
+
+<li *ngFor="let data of homeResponseData">
+  <span>Title: {{data.homeData.header.title}}</span>
+  <span>Slogan: {{data.homeData.header.slogan}}</span>
+</li>
+-->
+
+
+
+<!--
+<div>
+  <p>
+    <a [routerLink]="['/login']" class="btn btn-warning">Logout</a>
+  </p>
+</div>
+
+<zen-app class="row container-fluid" *ngFor="let data of homeResponseData" [valueTitle]="data.homeData.header.title">  
+    <zen-home>
+   <div class="row">
+        <zen-header>
+        <zen-search></zen-search>
+        <zen-user>
+          <zen-login></zen-login>
+        </zen-user>
+      </zen-header>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <zen-categories></zen-categories>
+    </div>
+    <div class="col-md-6">
+      <zen-newscontainer>
+          <li *ngFor="let data of homeResponseData">
+              <span>Title: {{data.homeData.header.title}}</span>
+              <span>Slogan: {{data.homeData.header.slogan}}</span>
+            </li>
+        <zen-news></zen-news>
+        <zen-news></zen-news>
+        <zen-news></zen-news>
+        <zen-news></zen-news>
+      </zen-newscontainer>
+    </div>
+    <div class="col-md-3">
+      <zen-topvideos></zen-topvideos>
+    </div>
+  </div>
+  <div class="row">
+    <zen-footer></zen-footer>
+  </div>
+  </zen-home>
+</zen-app>
+
+-->
+
+<!--
+<zen-app>
+  <zen-home>
+    <zen-header>
+      <zen-search></zen-search>
+      <zen-user>
+        <zen-login></zen-login>
+      </zen-user>
+    </zen-header>
+    <zen-categories></zen-categories>
+    <zen-newscontainer>
+      <zen-news></zen-news>
+      <zen-news></zen-news>
+      <zen-news></zen-news>
+      <zen-news></zen-news>
+    </zen-newscontainer>
+    <zen-topvideos></zen-topvideos>
+    <zen-footer></zen-footer>
+  </zen-home>
+</zen-app>
+-->

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'zen-app',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZenAppComponent implements OnInit {
 
+  @Input() homeResponse: any[];  
   constructor() { }
 
   ngOnInit() {

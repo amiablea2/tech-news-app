@@ -1,3 +1,4 @@
-<p>
-  zen-topvideos works!
-</p>
+Top Videos:
+<ul *ngFor="let video of allVideos">
+  <li>Category: {{video.category}} <br> Headline: {{video.headline}} </li>
+</ul>
